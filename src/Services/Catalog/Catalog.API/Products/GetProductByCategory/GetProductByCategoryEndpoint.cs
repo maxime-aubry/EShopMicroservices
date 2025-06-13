@@ -8,8 +8,8 @@
         {
             app.MapGet("/products/category/{category}", async (string category, ISender sender) =>
             {
-                GetProductByCategoryResult? result = await sender.Send(new GetProductByCategoryQuery(category));
-                GetProductByCategoryResponse? response = result.Adapt<GetProductByCategoryResponse>();
+                GetProductByCategoryResult result = await sender.Send(new GetProductByCategoryQuery(category));
+                GetProductByCategoryResponse response = result.Adapt<GetProductByCategoryResponse>();
                 return Results.Ok(response);
             })
             .WithName("GetProductByCategory")

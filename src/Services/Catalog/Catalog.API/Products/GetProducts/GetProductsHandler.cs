@@ -12,8 +12,8 @@ namespace Catalog.API.Products.GetProducts
         public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
         {
             logger.LogInformation("GetProductsQueryHandler.Handle called with {@Query}", query);
-            IReadOnlyList<Product>? products = await session.Query<Product>().ToListAsync(cancellationToken);
-            return new GetProductsResult(products ?? new List<Product>());
+            IReadOnlyList<Product> products = await session.Query<Product>().ToListAsync(cancellationToken);
+            return new GetProductsResult(products);
         }
     }
 }

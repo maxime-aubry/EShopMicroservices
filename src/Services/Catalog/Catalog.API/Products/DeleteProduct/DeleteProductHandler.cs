@@ -6,6 +6,14 @@ namespace Catalog.API.Products.DeleteProduct
 
     public record DeleteProductResult(bool IsSuccess);
 
+    public class DeleteProductCommandValidator : AbstractValidator<DeleteProductCommand>
+    {
+        public DeleteProductCommandValidator()
+        {
+            RuleFor(command => command.Id).NotEmpty().WithMessage("Product ID is required");
+        }
+    }
+
     internal class DeleteProductCommandHandler
         (IDocumentSession session, ILogger<DeleteProductCommandHandler> logger)
         : ICommandHandler<DeleteProductCommand, DeleteProductResult>
@@ -15,7 +23,7 @@ namespace Catalog.API.Products.DeleteProduct
             logger.LogInformation("DeleteProductCommandHandler.Handle called with {@Command}", command);
 
             session.Delete<Product>(command.Id);
-            await session.SaveChangesAsync();
+            await session.SaveChangesAsync(cancellationToken);
 
             return new DeleteProductResult(true);
         }

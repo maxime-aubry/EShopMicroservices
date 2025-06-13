@@ -12,7 +12,7 @@
         {
             logger.LogInformation("GetProductByCategoryHandler.Handle called with {@Query}", query);
 
-            IReadOnlyList<Product>? products = await session.Query<Product>()
+            IReadOnlyList<Product> products = await session.Query<Product>()
                 .Where(p => p.Category.Contains(query.Category))
                 .ToListAsync();
 

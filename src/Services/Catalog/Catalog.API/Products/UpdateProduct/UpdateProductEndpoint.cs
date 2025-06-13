@@ -10,9 +10,9 @@
         {
             app.MapPut("/products", async (UpdateProductRequest request, ISender sender) =>
             {
-                UpdateProductCommand? command = request.Adapt<UpdateProductCommand>();
-                UpdateProductResult? result = await sender.Send(command);
-                UpdateProductResponse? response = result.Adapt<UpdateProductResponse>();
+                UpdateProductCommand command = request.Adapt<UpdateProductCommand>();
+                UpdateProductResult result = await sender.Send(command);
+                UpdateProductResponse response = result.Adapt<UpdateProductResponse>();
                 return Results.Ok(response);
             })
             .WithName("UpdateProduct")
