@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.API", "Services\Cat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{1717AD9A-C4CB-447C-885C-B68ABDB31296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks.csproj", "{8552DD9D-E12E-4F9D-B96D-764F508FD82E}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{1314F070-B2E3-41DB-B5AF-FED1E2B9E171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1314F070-B2E3-41DB-B5AF-FED1E2B9E171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1314F070-B2E3-41DB-B5AF-FED1E2B9E171}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8552DD9D-E12E-4F9D-B96D-764F508FD82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8552DD9D-E12E-4F9D-B96D-764F508FD82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8552DD9D-E12E-4F9D-B96D-764F508FD82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8552DD9D-E12E-4F9D-B96D-764F508FD82E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,7 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{65772DD7-D564-43AC-8886-C657B4A0AD5C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1314F070-B2E3-41DB-B5AF-FED1E2B9E171} = {65772DD7-D564-43AC-8886-C657B4A0AD5C}
-		{8552DD9D-E12E-4F9D-B96D-764F508FD82E} = {1717AD9A-C4CB-447C-885C-B68ABDB31296}
+		{6E7E435F-1589-DC76-9E72-AAA8CDEA1B17} = {1717AD9A-C4CB-447C-885C-B68ABDB31296}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B247A42-D01C-4561-87B8-2898F748C106}
